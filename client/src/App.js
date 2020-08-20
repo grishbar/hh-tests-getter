@@ -20,7 +20,7 @@ export default class App extends React.Component {
     window.setInterval(this.getTestsData, 5000);
     /* 
     setTimeout(() => {
-      fetch('/api/tests-data/add-test', {
+      fetch('https://hh-tests-getter.herokuapp.com/api/tests-data/add-test', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json;charset=utf-8'

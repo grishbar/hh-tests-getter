@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var fs = require("fs");
+var cors = require('cors')
 const path = require('path');
  
 var app = express();
@@ -16,7 +17,7 @@ app.get("/api/tests-data", function(req, res){
 });
 
 // добавление теста
-app.post("/api/tests-data/add-test", jsonParser, function (req, res) {
+app.post("/api/tests-data/add-test", cors(), jsonParser, function (req, res) {
     if(!req.body) return res.sendStatus(400);
     var content = fs.readFileSync("tests-data.json", "utf8");
     var data = JSON.parse(content);
