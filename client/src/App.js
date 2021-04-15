@@ -44,7 +44,7 @@ export default class App extends React.Component {
           {this.state.testsData && this.state.testsData.map((item, index) => (
             <tr key={index}>
               <td>{index}</td>
-              <td>{item.join(',')}</td>
+              <td>{item}</td>
             </tr>
           ))}
         </tbody>
